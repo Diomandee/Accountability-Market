@@ -1,0 +1,51 @@
+[project]
+name = "Accountability-Market"
+authors = []
+description = ""
+telemetry = true
+requirements = []
+
+[contracts.ContinuousToken]
+path = "contracts/ContinuousToken/ContinuousToken.clar"
+depends_on = []
+
+[contracts.CurationToken]
+path = "contracts/CurationToken/CurationToken.clar"
+depends_on = ["sip010-ft-trait", "CurationToken-trait", "CurationToken-fee"]
+
+[contracts.CurationToken-doa]
+path = "contracts/CurationToken/CurationToken-doa.clar"
+depends_on = []
+
+[contracts.CurationToken-fee]
+path = "contracts/CurationToken/CurationToken-fee.clar"
+depends_on = []
+
+[contracts.CurationToken-trait]
+path = "contracts/Traits/CurationToken-trait.clar"
+depends_on = []
+
+[contracts.Hatch]
+path = "contracts/Hatch.clar"
+depends_on = []
+
+[contracts.Hatch-traits]
+path = "contracts/Hatch-traits.clar"
+depends_on = []
+
+[contracts.sip010-ft-trait]
+path = "contracts/Traits/sip010-ft-trait.clar"
+depends_on = []
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
