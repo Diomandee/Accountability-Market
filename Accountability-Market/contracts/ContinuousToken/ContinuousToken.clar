@@ -4,7 +4,7 @@
 (define-data-var poolBalance uint u0)
 ;;  https://explorer.stacks.co/address/ST11ZRCRRZ1WZSNGAF8ZCJ1D0THZKXK8XD2FJPGVS?chain=testnet
 (define-data-var auction-counter uint u0)
-(define-data-var baseCost uint u1000000)
+(define-data-var baseCost uint u100000)
 (define-constant p 10)
 (define-data-var last-id uint u0)
 
